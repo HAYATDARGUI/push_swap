@@ -1,0 +1,37 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   push_swap.h                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
+/*   Updated: 2025/01/08 17:24:59 by hdargui          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#ifndef __PUSH_SWAP_H
+#define __PUSH_SWAP_H
+
+#include <stdlib.h>
+#include <unistd.h>
+
+typedef struct s_node
+{
+    int         data;
+    int         position;
+    struct s_node   *next_node;
+    struct s_node   *prev_node;
+}                   t_node;
+
+char	**ft_split(char const *s, char c);
+char	**free_split(char **alloc);
+int str_int(char ***new_str,int **new_int,int len1);
+int to_stack(int *new_int,int len, t_node **lst);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
+int	count_words(const char *str, char c);
+char	*ft_strjoin(char const *s1, char const *s2);
+t_node	*ft_lstnew(int content);
+void	ft_lstadd_front(t_node **lst, t_node *newn);
+#endif
