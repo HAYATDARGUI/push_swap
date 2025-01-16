@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 16:25:47 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 17:59:58 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,8 @@ int	count_words(const char *str, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 t_node	*ft_lstnew(int content);
 void	ft_lstadd_front(t_node **lst, t_node *newn);
+t_node	*ft_lstlast(t_node *lst);
+void	ft_lstadd_back(t_node **lst, t_node *newlst);
 void sa(t_node **lst,int i);
 void sb(t_node **lst,int i);
 int minnumber(t_node **lst_a);

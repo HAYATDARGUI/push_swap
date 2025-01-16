@@ -6,12 +6,12 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:15:52 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 15:44:28 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 17:56:30 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
+
 void reverse_rotate_stack(t_node **lst)
 {
     t_node *tmp1;

@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:55:08 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:42:06 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 17:53:04 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,56 +73,44 @@ void handle5(t_node **lst_a,t_node **lst_b)
     pa(lst_a,lst_b,0);
     ra(lst_a, 0);
 }
-#include <stdio.h>
+int main() {
+    // Sample data for list A and B
+    t_node *lst_a = NULL;
+    t_node *lst_b = NULL;
 
-int main()
-{
-    // Create a sample linked list for lst_a with three nodes
-    t_node *head_a = (t_node *)malloc(sizeof(t_node));
-    t_node *second_a = (t_node *)malloc(sizeof(t_node));
-    t_node *third_a = (t_node *)malloc(sizeof(t_node));
+    // Manually adding nodes to lst_a (for example purposes)
+    t_node *new_node = malloc(sizeof(t_node));
+    new_node->data = 3;
+    new_node->position = 1;
+    new_node->next_node = lst_a;
+    lst_a = new_node;
 
-    head_a->position = 2;
-    head_a->next_node = second_a;
-    head_a->prev_node = NULL;
+    new_node = malloc(sizeof(t_node));
+    new_node->data = 5;
+    new_node->position = 2;
+    new_node->next_node = lst_a;
+    lst_a = new_node;
 
-    second_a->position = 3;
-    second_a->next_node = third_a;
-    second_a->prev_node = head_a;
+    new_node = malloc(sizeof(t_node));
+    new_node->data = 2;
+    new_node->position = 3;
+    new_node->next_node = lst_a;
+    lst_a = new_node;
 
-    third_a->position = 1;
-    third_a->next_node = NULL;
-    third_a->prev_node = second_a;
+    // Call handle4 function
+    handle4(&lst_a, &lst_b);
 
-    // Initialize lst_b as an empty list
-    t_node *head_b = NULL;
-
-    // Call the handle4 function
-    handle4(&head_a, &head_b);
-
-    // Print the result to verify the list is sorted and the maximum element is handled correctly
-    t_node *current = head_a;
-    printf("List A: ");
-    while (current != NULL)
-    {
-        printf("%d ", current->position);
-        current = current->next_node;
+    // Clean up (free allocated memory)
+    t_node *temp;
+    while (lst_a != NULL) {
+        temp = lst_a;
+        lst_a = lst_a->next_node;
+        free(temp);
     }
-    printf("\n");
-
-    current = head_b;
-    printf("List B: ");
-    while (current != NULL)
-    {
-        printf("%d ", current->position);
-        current = current->next_node;
+    while (lst_b != NULL) {
+        temp = lst_b;
+        lst_b = lst_b->next_node;
+        free(temp);
     }
-    printf("\n");
-
-    // Free the allocated memory
-    free(third_a);
-    free(second_a);
-    free(head_a);
-
     return 0;
 }
