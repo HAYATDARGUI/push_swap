@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:17:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/07 17:40:54 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 17:36:02 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int str_int(char ***new_str,int **new_int,int len1)
     *new_int=(int*)malloc(sizeof(int)*(len1));
     if(!new_int)
     {
-        return NULL;
+        return 0;
     }
     while(i < len1)
     {

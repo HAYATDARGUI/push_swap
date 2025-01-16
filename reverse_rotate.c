@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:15:52 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/09 10:45:54 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 15:44:28 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void reverse_rotate_stack(t_node **lst)
     tmp1->prev_node = NULL;
     ft_lstadd_front(lst,tmp1);
 }
-void ra(t_node **lst_a,int i)
+void rra(t_node **lst_a,int i)
 {
     reverse_rotate_stack(lst_a);
     if(i)
@@ -41,7 +41,7 @@ void ra(t_node **lst_a,int i)
         write(1, "ra", 2);
     }
 }
-void rb(t_node **lst_b,int i)
+void rrb(t_node **lst_b,int i)
 {
     reverse_rotate_stack(lst_b);
     if(i)

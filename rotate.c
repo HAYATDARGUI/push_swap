@@ -6,12 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:31:27 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/09 12:08:01 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/16 16:34:33 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
 t_node	*ft_lstlast(t_node *lst)
 {
@@ -50,7 +49,6 @@ void ra(t_node **lst_a,int i)
 	{
 		write(1, "ra",2);
 	}
-	
 }
 void rb(t_node **lst_b,int i)
 {
