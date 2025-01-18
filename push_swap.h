@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:59:58 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/17 15:26:35 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strdup(const char *s1);
 int	count_words(const char *str, char c);
 char	*ft_strjoin(char const *s1, char const *s2);
 t_node	*ft_lstnew(int content);
-void	ft_lstadd_front(t_node **lst, t_node *newn);
+void ft_lstadd_front(t_node **lst, t_node *newn);
 t_node	*ft_lstlast(t_node *lst);
 void	ft_lstadd_back(t_node **lst, t_node *newlst);
 void sa(t_node **lst,int i);
@@ -47,4 +47,5 @@ void rra(t_node **lst_a,int i);
 void pb(t_node **lst_a, t_node **lst_b,int i);
 void pa(t_node **lst_a, t_node **lst_b,int i);
 void rrb(t_node **lst_b,int i);
+void reverse_rotate_stack(t_node **lst);
 #endif

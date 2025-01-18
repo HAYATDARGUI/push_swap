@@ -6,32 +6,30 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:15:52 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:56:30 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/17 13:00:20 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
+
 
 void reverse_rotate_stack(t_node **lst)
 {
-    t_node *tmp1;
-    t_node *tmp2;
+    t_node *last_node;
     
-
     if(!*lst || !(*lst)->next_node)
     {
         return ;
     }
-    tmp2=*lst;
-    while(tmp2->next_node)
+    last_node = *lst;
+    while(last_node->next_node)
     {
-        tmp2=((*lst)->next_node);
+        last_node=((last_node)->next_node);
     }
-    tmp1=tmp2;
-    
-    tmp2->prev_node->next_node=NULL;
-    tmp1->prev_node = NULL;
-    ft_lstadd_front(lst,tmp1);
+    t_node *tmp1prev=last_node->prev_node;
+    ft_lstadd_front(lst, last_node);
+    tmp1prev->next_node=NULL;
 }
 void rra(t_node **lst_a,int i)
 {

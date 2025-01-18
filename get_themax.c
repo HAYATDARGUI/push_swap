@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 12:28:24 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 12:37:41 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/17 16:53:13 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,24 @@
 
 int maxnumber(t_node **lst_a)
 {
+    int pos=0;
+    int savep;
     if(!*lst_a || !(*lst_a)->next_node)
     {
         return 0;
     }
     t_node *current=*lst_a;
-    int min=current->data;
+    int max=current->data;
+    savep=pos;
     while(current)
     {
-           if(min < current->data)
+           if(max < current->data)
            {
-                min =current->data;
+                max =current->data;
+                savep=pos;
            }
            current=current->next_node;
+           pos++;
     }
-    return min;
+    return savep;
 }

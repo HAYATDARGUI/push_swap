@@ -6,19 +6,21 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 11:15:47 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:57:42 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/18 11:29:43 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <unistd.h>
 
-void	ft_lstadd_front(t_node **lst, t_node *newn)
+void ft_lstadd_front(t_node **lst, t_node *newn)
 {
-	if (!lst || !newn)
-		return ;
-	newn->next_node = *lst;
-	*lst = newn;
+    if (!lst || !newn)
+        return;
+    newn->next_node = *lst;
+    if (*lst)
+        (*lst)->prev_node = newn;
+    *lst = newn;
+    newn->prev_node = NULL;
 }
 void push_to_stack(t_node **lst1,t_node **lst2)
 {
@@ -53,4 +55,3 @@ void pb(t_node **lst_a, t_node **lst_b,int i)
         write(1,"pb",2);
     }
 }
-

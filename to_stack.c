@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:32:15 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:58:57 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/18 12:54:02 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,24 +26,25 @@ t_node	*ft_lstnew(int content)
     
 	return (node);
 }
-// t_node	*ft_lstlast(t_node *lst)
-// {
-// 	if (!lst)
-// 		return (NULL);
-// 	while (lst->next_node != NULL)
-// 		lst = lst->next_node;
-// 	return (lst);
-// }
 void	ft_lstadd_back(t_node **lst, t_node *new)
 {
 	if (!lst || !new)
 		return ;
 	if (!*lst)
+    {
 		*lst = new;
+        new->prev_node=NULL;
+        new->next_node = NULL; 
+    }
 	else
-		ft_lstlast(*lst)->next_node = new;
+    {
+        t_node *last_node=ft_lstlast(*lst);
+		last_node->next_node = new;
+        new->prev_node=last_node;
+        new->next_node = NULL;
+    }
 }
-int to_stack(int *new_int,int len, t_node **lst)
+int to_stack(int *new_int,int len, t_node **lst_a)
 {
      int i=0;
      int j=0;
@@ -63,11 +64,11 @@ int to_stack(int *new_int,int len, t_node **lst)
                 new_one->position++;
             }
         }
-        if(!*lst)
+        if(!*lst_a)
         {
-            *lst=new_one;
+            *lst_a=new_one;
         }
-        ft_lstadd_back(lst,new_one);
+        ft_lstadd_back(lst_a,new_one);
         i++;
      }
     return 1;
