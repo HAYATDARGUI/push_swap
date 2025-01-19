@@ -6,12 +6,27 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:55:08 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/18 11:29:28 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/19 17:32:03 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+int already_sorted(t_node *lst_a)
+{
+    if(!lst_a)
+    {
+        return NULL;
+    }
+    while (lst_a->next_node)
+    {
+        if(lst_a->data >lst_a->next_node->data)
+        {
+            return 0;
+        }
+        lst_a=lst_a->next_node;
+    }
+    return 1;
+}
 void handele3(t_node **lst_a)
 {
     int nb_1=(*lst_a)->position;
@@ -82,4 +97,65 @@ void handle5(t_node **lst_a,t_node **lst_b)
     handle4(lst_a,lst_b);
     pa(lst_a,lst_b,0);
     ra(lst_a, 0);
+}
+int deja_vu(t_node *lst_a)
+{
+    if(!lst_a)
+    {
+        return NULL;
+    }
+    while (lst_a->next_node)
+    {
+        if(lst_a->data >lst_a->next_node->data)
+        {
+            return 0;
+        }
+        lst_a=lst_a->next_node;
+    }
+    return 1;
+}
+int stacksize(t_node *lst_a)
+{
+    t_node *current;
+    int size=0;
+    current =lst_a;
+    while (current)
+    {
+        size++;
+        current=current->next_node;
+    }
+    return size;
+}
+void sort_stack(t_node **lst_a,t_node **lst_b)
+{
+    int size_of_stack;
+    if(!lst_a)
+    {
+        return ;
+    }
+    if(deja_vu(*lst_a))
+    {
+        return ;
+    }
+    size_of_stack=stacksize(*lst_a);
+    if(size_of_stack==2)
+    {
+        sa(lst_a, 0);
+    }
+    else if(size_of_stack==3)
+    {
+        handele3(lst_a);
+    }
+    else if(size_of_stack==4)
+    {
+        handle4(lst_a,lst_b);
+    }
+    else if(size_of_stack==5)
+    {
+        handle5(lst_a,lst_b);
+    }
+    else if(size_of_stack>5)
+    {
+        
+    }
 }
