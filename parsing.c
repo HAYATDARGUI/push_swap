@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:55:31 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/19 16:54:48 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/19 17:34:40 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,55 +107,4 @@ int parsing(char **arv, t_node **lst)
     if (!to_stack(new_int, len, lst))
         return 0;
     return 1;
-}
-
-////////
-void sort_stack(t_node **a, t_node **b) {
-    // Sorting algorithm (Push-Swap logic)
-    while (*a) {
-        pb(a, b,0);
-        ra(a,0);
-    }
-    while (*b) {
-        pa(a, b,0);
-    }
-}
-void print_stack(t_node *lst) {
-    while (lst) {
-        printf("%d -> ", lst->data);
-        lst = lst->next_node;
-    }
-    printf("\n");
-}
-
-int main(int argc, char **argv) {
-    t_node *a = NULL;
-    t_node *b = NULL;
-    int total_nums;
-
-    if (argc < 2) {
-        printf("Usage: ./program arg1 arg2 ...\n");
-        return 1;
-    }
-
-    // Parse arguments and fill stack `a`
-    if (!parsing(argv + 1, &a)) {
-        printf("Error in parsing arguments.\n");
-        return 1;
-    }
-
-    total_nums = argc - 1;
-
-    // Print the initial stack
-    printf("Initial stack a: ");
-    print_stack(a);
-
-    // Sort the stack using stack b as auxiliary
-    sort_stack(&a, &b);
-
-    // Print the sorted stack
-    printf("Sorted stack a: ");
-    print_stack(a);
-
-    return 0;
 }
