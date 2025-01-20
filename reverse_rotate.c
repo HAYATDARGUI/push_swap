@@ -6,13 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:15:52 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/17 13:00:20 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/20 16:19:55 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-#include <stdlib.h>
-
 
 void reverse_rotate_stack(t_node **lst)
 {

@@ -6,12 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:55:31 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/19 17:34:40 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/20 16:19:19 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
 
 static int is_valide(char **arv)
 {
@@ -26,7 +25,6 @@ static int is_valide(char **arv)
     }
     return 1;
 }
-
 char  *join_to_string(char **arv)
 {
     int i=0;
@@ -74,7 +72,6 @@ char *validate_join(char **join, char **arv,int *len)
   *len=(count_words(*join,' '));
   return *join;
 }
-#include <stdio.h>
 
 int split_string(char *join,char ***new_str)
 {

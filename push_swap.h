@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/17 15:26:35 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/20 12:16:53 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ t_node	*ft_lstnew(int content);
 void ft_lstadd_front(t_node **lst, t_node *newn);
 t_node	*ft_lstlast(t_node *lst);
 void	ft_lstadd_back(t_node **lst, t_node *newlst);
+int parsing(char **arv, t_node **lst);
+void sort_stack(t_node **lst_a,t_node **lst_b);
 void sa(t_node **lst,int i);
 void sb(t_node **lst,int i);
 int minnumber(t_node **lst_a);

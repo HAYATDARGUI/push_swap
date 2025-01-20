@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:32:15 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/19 16:17:17 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/20 15:12:05 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_lstadd_back(t_node **lst, t_node *new)
     {
         t_node *last_node=ft_lstlast(*lst);
 		last_node->next_node = new;
-        new->prev_node=last_node;
+        new->prev_node=last_node; 
         new->next_node = NULL;
     }
 }
