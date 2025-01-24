@@ -6,11 +6,12 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:55:31 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/20 16:19:19 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 15:03:09 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 static int is_valide(char **arv)
 {
@@ -67,6 +68,21 @@ char *validate_join(char **join, char **arv,int *len)
             *join=NULL;
             return NULL;
 		}
+        if (((*join)[i] == '+' || (*join)[i] == '-') && (i == 0 || (*join)[i - 1] == ' '))
+        {
+            if (!((*join)[i + 1] >= '0' && (*join)[i + 1] <= '9'))
+            {
+                free(*join);
+                *join = NULL;
+                return NULL;
+            }
+        }
+        else if (((*join)[i] == '+' || (*join)[i] == '-') && i > 0)
+        {
+            free(*join);
+            *join = NULL;
+            return NULL;
+        }
         i++;
 	}
   *len=(count_words(*join,' '));
@@ -77,7 +93,7 @@ int split_string(char *join,char ***new_str)
 {
   *new_str=ft_split(join,' ');
   if(!*new_str)
-  {
+  { 
     return 0;
   }
   free(join);
@@ -103,5 +119,6 @@ int parsing(char **arv, t_node **lst)
         return 0;
     if (!to_stack(new_int, len, lst))
         return 0;
+
     return 1;
 }

@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:31:27 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/18 11:29:20 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/21 17:02:26 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void ra(t_node **lst_a,int i)
 	rotate_stack(lst_a);
 	if(i)
 	{
-		write(1, "ra",2);
+		write(1, "ra\n",3);
 	}
 }
 void rb(t_node **lst_b,int i)
@@ -47,7 +47,7 @@ void rb(t_node **lst_b,int i)
 	rotate_stack(lst_b);
 	if(i)
 	{
-		write(1, "ra",2);
+		write(1, "rb\n",3);
 	}
 }
 void rr(t_node **lst_b, t_node **lst_a,int i)
@@ -56,6 +56,6 @@ void rr(t_node **lst_b, t_node **lst_a,int i)
 	rotate_stack(lst_b);
 	if(i)
 	{
-		write(1,"rr", 2);
+		write(1,"rr\n", 3);
 	}
 }

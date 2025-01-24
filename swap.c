@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:33:36 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/08 11:05:57 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/21 10:42:25 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void sa(t_node **lst,int i)
     swap(lst);
     if(i)
     {
-        write(1,"sa",2);
+        write(1,"sa\n",3);
     }
 }
 
@@ -49,7 +49,7 @@ void sb(t_node **lst,int i)
     swap(lst);
     if(i)
     {
-        write(1,"sb",2);
+        write(1,"sb\n",3);
     }
 }
 
@@ -59,6 +59,6 @@ void ss(t_node **lst_a,t_node **lst_b,int i)
     swap(lst_b);
     if(i)
     {
-        write(1,"ss",2);
+        write(1,"ss\n",3);
     }
 }

@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 12:22:37 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 12:29:44 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/21 17:37:02 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,18 @@ int minnumber(t_node **lst_a)
         return 0;
     }
     t_node *current=*lst_a;
-    int min=current->data;
+    int min=current->position;
+    int i=0;
+    int minp=0;
     while(current)
     {
-           if(min > current->data)
+           if(min > current->position)
            {
-                min =current->data;
+                min =current->position;
+                minp=i;
            }
            current=current->next_node;
+           i++;
     }
-    return min;
+    return minp;
 }

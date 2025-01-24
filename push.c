@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 11:15:47 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/18 11:29:43 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/21 10:40:43 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void pa(t_node **lst_a, t_node **lst_b,int i)
     push_to_stack(lst_a, lst_b);
     if(i)
     {
-        write(1,"pa",2);
+        write(1,"pa\n",3);
     }
 }
 void pb(t_node **lst_a, t_node **lst_b,int i)
@@ -52,6 +52,6 @@ void pb(t_node **lst_a, t_node **lst_b,int i)
     push_to_stack(lst_b, lst_a);
     if(i)
     {
-        write(1,"pb",2);
+        write(1,"pb\n",3);
     }
 }

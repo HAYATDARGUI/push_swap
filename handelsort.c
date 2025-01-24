@@ -6,11 +6,12 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:55:08 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/20 16:18:46 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 12:59:27 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 int already_sorted(t_node *lst_a)
 {
     if(!lst_a)
@@ -27,6 +28,7 @@ int already_sorted(t_node *lst_a)
     }
     return 1;
 }
+
 void handele3(t_node **lst_a)
 {
     int nb_1=(*lst_a)->position;
@@ -57,45 +59,61 @@ void handele3(t_node **lst_a)
    }
 }
 
+int stacksize(t_node *lst_a)
+{
+    t_node *current;
+    int size=0;
+    current =lst_a;
+    while (current)
+    {
+        size++;
+        current=current->next_node;
+    }
+    return size;
+}
 void handle4(t_node **lst_a,t_node **lst_b)
 {
-    int a= maxnumber(lst_a);
-
-    int i=1;
-    while(i<a && a!=3)
-    {
-        ra(lst_a,1);
-        i++;
-    }
+    int a= minnumber(lst_a);
     if(a==3)
     {
         rra(lst_a,1);
     }
-    pb(lst_a,lst_b,1);
+    else{
 
+        while(a)
+        {
+            ra(lst_a,1);
+            a--;
+        }
+    }
+    pb(lst_a,lst_b,1);
     handele3(lst_a);
     pa(lst_a,lst_b,1);
-    ra(lst_a, 1);
 }
-void handle5(t_node **lst_a,t_node **lst_b)
+
+void handle5(t_node **lst_a, t_node **lst_b)
 {
-     int a= maxnumber(lst_a);
-     int i=0;
-    while(i<a && a!=3)
-    {
-        ra(lst_a,1);
-        i++;
-    }
-    if(a==3)
+    int min = minnumber(lst_a);
+    
+    if(min==4)
     {
         rra(lst_a,1);
     }
-    pb(lst_a,lst_b,1);
+    else
+    {
+        while(min)
+        {
+            ra(lst_a,1);
+            min--;
+        }
+    }
+    pb(lst_a, lst_b, 1);
+
+    handle4(lst_a, lst_b);
     
-    handle4(lst_a,lst_b);
-    pa(lst_a,lst_b,1);
-    ra(lst_a, 1);
+    pa(lst_a, lst_b, 1);
 }
+
 int deja_vu(t_node *lst_a)
 {
     if(!lst_a)
@@ -112,23 +130,12 @@ int deja_vu(t_node *lst_a)
     }
     return 1;
 }
-int stacksize(t_node *lst_a)
-{
-    t_node *current;
-    int size=0;
-    current =lst_a;
-    while (current)
-    {
-        size++;
-        current=current->next_node;
-    }
-    return size;
-}
+
 void push_to_stack_b(t_node **lst_a, t_node **lst_b)
 {
     int size = stacksize(*lst_a);
     int min = 0;
-    int max = (int)(0.05 * size + 10);
+    int max = (int)(0.048 * size + 10);
     
     while (*lst_a)
     {
@@ -160,17 +167,18 @@ void push_b_to_a(t_node **lst_a, t_node **lst_b)
     {
         size = stacksize(*lst_b);
         max = maxnumber(lst_b);
-        if (max <= size / 2)
+        max++;
+        if ((max - 1) <= size / 2 && max != 1)
         {
-            while (max)
+            while (max != 1)
             {
                 rb(lst_b, 1);
                 max--;
             }
         }
-        else
+        else if( max != 1)
         {
-            while (max < size)
+            while (max <= size)
             {
                 rrb(lst_b, 1);
                 max++;

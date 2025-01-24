@@ -6,11 +6,12 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:45:43 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/16 17:54:33 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 10:33:46 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -36,6 +37,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	free((void*)s1);
 	s3[i] = '\0';
 	return (s3);
 }

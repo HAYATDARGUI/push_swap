@@ -6,11 +6,13 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 13:00:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/20 16:19:40 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 15:25:55 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
+#include <string.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
@@ -39,6 +41,7 @@ void	free_stack(t_node **lst)
 		*lst = (*lst)->next_node;
 		free(tmp);
 	}
+	lst = NULL;
 }
 
 int	main(int argc, char **argv)
@@ -59,5 +62,6 @@ int	main(int argc, char **argv)
         sort_stack(&lst_a, &lst_b);
     }
     free_stack(&lst_a);
+	free_stack(&lst_b);
     return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/20 12:16:53 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 10:35:01 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,4 +50,6 @@ void pb(t_node **lst_a, t_node **lst_b,int i);
 void pa(t_node **lst_a, t_node **lst_b,int i);
 void rrb(t_node **lst_b,int i);
 void reverse_rotate_stack(t_node **lst);
+void    free_stack(t_node **lst);
+
 #endif

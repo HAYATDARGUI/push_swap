@@ -6,11 +6,12 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:32:15 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/20 15:12:05 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/24 15:05:34 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+#include <stdlib.h>
 
 t_node	*ft_lstnew(int content)
 {
@@ -54,22 +55,22 @@ int to_stack(int *new_int,int len, t_node **lst_a)
         new_one=ft_lstnew(new_int[i]);
         if(!new_one)
         {
+            free(new_int);
+            free_stack(lst_a);
             return 0;
         }
         j=0;
         while(j<len)
         {
             if(new_int[i] > new_int[j++])
-            {
                 new_one->position++;
-            }
         }
         if(!*lst_a)
-        {
             *lst_a=new_one;
-        }
-        ft_lstadd_back(lst_a,new_one);
+        else 
+            ft_lstadd_back(lst_a,new_one);
         i++;
      }
+    free(new_int);
     return 1;
 }
