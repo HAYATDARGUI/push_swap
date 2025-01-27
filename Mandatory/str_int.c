@@ -6,13 +6,13 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:17:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 14:01:33 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:41:46 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	ft_atoi(const char *str, int *in_range)
+long	ft_atoi(const char *str, int *in_range)
 {
 	int		sign;
 	long	res;
@@ -32,12 +32,12 @@ int	ft_atoi(const char *str, int *in_range)
 	{
 		res = res * 10 + (*str - '0');
 		if ((res * sign) > (long)2147483647 || (res * sign) < (long)-2147483648)
-			return (0);
+			error();
 		str++;
 	}
 	if (*str != '\0')
 		*in_range = 0;
-	return ((int)(res * sign));
+	return ((long)(res * sign));
 }
 
 int	is_douple(int i, int *new_int, int tmp)
@@ -73,8 +73,6 @@ int	str_int(char ***new_str, int **new_int, int len1)
 	while (i < len1)
 	{
 		tmp = ft_atoi((*new_str)[i], &in_range);
-		if (tmp == 0)
-			break ;
 		if (!in_range || is_douple(i, *new_int, tmp))
 			return (free(*new_int), free_split(*new_str), 0);
 		(*new_int)[i] = tmp;

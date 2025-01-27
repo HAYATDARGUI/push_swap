@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 16:31:27 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 15:21:38 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 15:32:56 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../Mandatory/push_swap.h"
 
 t_node	*ft_lstlast(t_node *lst)
 {

@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 11:50:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 11:26:49 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:40:52 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_node
 	struct s_node	*prev_node;
 }					t_node;
 
+void				error(void);
 void				ss(t_node **lst_a, t_node **lst_b, int i);
 int					ft_strncmp(char *s1, char *s2, size_t n);
 void				rrr(t_node **lst_a, t_node **lst_b, int i);

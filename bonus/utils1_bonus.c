@@ -1,47 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils1.c                                           :+:      :+:    :+:   */
+/*   utils1_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 19:07:24 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/24 14:49:54 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 15:33:13 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
-
-size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-char	*ft_strdup(const char *s1)
-{
-	char	*s2;
-	size_t	i;
-	size_t	l;
-
-	l = ft_strlen(s1);
-	i = 0;
-	s2 = malloc(sizeof(char) * (l + 1));
-	if (s2 == NULL)
-	{
-		return (NULL);
-	}
-	while (s1[i])
-	{
-		s2[i] = s1[i];
-		i++;
-	}
-	s2[i] = '\0';
-	return (s2);
-}
+#include "../Mandatory/push_swap.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
@@ -66,6 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	result[i] = '\0';
 	return (result);
 }
+
 int	count_words(const char *str, char c)
 {
 	int	count;

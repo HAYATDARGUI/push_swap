@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 13:00:09 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 13:59:39 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:41:23 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int	main(int argc, char **argv)
 {
 	t_node	*lst_a;
 	t_node	*lst_b;
+	t_node	*ptr;
 
 	(void)argc;
 	lst_a = NULL;
@@ -56,6 +57,11 @@ int	main(int argc, char **argv)
 		error();
 	else
 		sort_stack(&lst_a, &lst_b);
+	ptr = lst_a;
+	while (ptr)
+	{
+		ptr = ptr->next_node;
+	}
 	free_stack(&lst_a);
 	return (0);
 }
