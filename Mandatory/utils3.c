@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 14:05:03 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 15:36:58 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 11:28:09 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,20 @@ int	deja_vu(t_node *lst_a)
 		lst_a = lst_a->next_node;
 	}
 	return (1);
+}
+
+void	help_function2(t_node **lst_a, int nb_1, int nb_2, int nb_3)
+{
+	if (nb_1 > nb_2 && nb_3 > nb_1)
+		sa(lst_a, 1);
+	else if (nb_2 > nb_3 && nb_3 > nb_1)
+	{
+		rra(lst_a, 1);
+		sa(lst_a, 1);
+	}
+	else if (nb_1 > nb_3 && nb_3 > nb_2)
+	{
+		rra(lst_a, 1);
+		rra(lst_a, 1);
+	}
 }

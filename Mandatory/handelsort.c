@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 10:55:08 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 16:15:26 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 11:28:37 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ void	handele3(t_node **lst_a)
 		sa(lst_a, 1);
 	}
 	else
-		help_function2(lst_a);
+		help_function2(lst_a, nb1, nb2, nb3);
 }
 
 void	handle4(t_node **lst_a, t_node **lst_b)
