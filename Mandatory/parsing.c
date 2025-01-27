@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:55:31 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/24 17:24:21 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 13:52:38 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,8 +68,8 @@ char	*validate_join(char **join, char **arv, int *len)
 		if (!((*join)[i] == ' ' || (*join)[i] == '-' || (*join)[i] == '+'
 				|| ((*join)[i] >= '0' && (*join)[i] <= '9')))
 			return (free(*join), *join = NULL, NULL);
-		if (((*join)[i] == '+' || (*join)[i] == '-') && (i == 0 || (*join)[i
-				- 1] == ' '))
+		if (((*join)[i] == '+' || (*join)[i] == '-') && (i == 0 || 
+				(*join)[i - 1] == ' '))
 		{
 			if (!((*join)[i + 1] >= '0' && (*join)[i + 1] <= '9'))
 				return (free(*join), *join = NULL, NULL);

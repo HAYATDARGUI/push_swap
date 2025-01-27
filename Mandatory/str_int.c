@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:17:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 14:28:01 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 14:01:33 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *str, int *in_range)
 	{
 		res = res * 10 + (*str - '0');
 		if ((res * sign) > (long)2147483647 || (res * sign) < (long)-2147483648)
-			return (-1);
+			return (0);
 		str++;
 	}
 	if (*str != '\0')
@@ -73,7 +73,7 @@ int	str_int(char ***new_str, int **new_int, int len1)
 	while (i < len1)
 	{
 		tmp = ft_atoi((*new_str)[i], &in_range);
-		if (tmp == -1)
+		if (tmp == 0)
 			break ;
 		if (!in_range || is_douple(i, *new_int, tmp))
 			return (free(*new_int), free_split(*new_str), 0);
