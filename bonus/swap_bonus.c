@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 17:33:36 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:33:05 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:53 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 void	swap(t_node **lst)
 {

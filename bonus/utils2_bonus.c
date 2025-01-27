@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:45:43 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:33:18 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:51:06 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

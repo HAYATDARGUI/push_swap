@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 13:32:15 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:33:10 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:56 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 t_node	*ft_lstnew(int content)
 {

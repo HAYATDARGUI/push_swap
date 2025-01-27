@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/16 12:22:37 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:32:36 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:23 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 int	minnumber(t_node **lst_a)
 {

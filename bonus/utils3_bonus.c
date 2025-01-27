@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/26 14:05:03 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:33:23 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:53:10 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 size_t	ft_strlen(const char *s)
 {

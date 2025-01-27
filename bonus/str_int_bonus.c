@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:17:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 18:42:25 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:48 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 long	ft_atoi(const char *str, int *in_range)
 {

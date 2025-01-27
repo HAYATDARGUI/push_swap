@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/08 17:15:52 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:32:52 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:35 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 void	reverse_rotate_stack(t_node **lst)
 {

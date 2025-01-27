@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/24 17:39:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 13:40:23 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:53:20 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	free_stack(t_node **lst)
 	lst = NULL;
 }
 
-void	error2(void)
+void	error(void)
 {
 	write(1, "Error\n", 6);
 	exit(1);
@@ -56,7 +56,7 @@ void	moves(t_node **lst_a, t_node **lst_b, char *line)
 	else if (!ft_strncmp(line, "rrr\n", 4))
 		rrr(lst_a, lst_b, 0);
 	else
-		error2();
+		error();
 }
 
 void	ok_or_ko(t_node *lst_a, t_node *lst_b)
@@ -79,7 +79,7 @@ int	main(int argc, char **argv)
 	if (argc < 2)
 		return (0);
 	if (!parsing(argv + 1, &lst_a))
-		error2();
+		error();
 	while (1)
 	{
 		line = get_next_line(0);

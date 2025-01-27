@@ -6,11 +6,11 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 16:55:31 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 15:32:41 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/27 18:50:27 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../Mandatory/push_swap.h"
+#include "checker.h"
 
 static int	is_valide(char **arv)
 {
