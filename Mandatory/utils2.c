@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:45:43 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/26 15:36:39 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/28 11:22:09 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ void	push_to_stack_b(t_node **lst_a, t_node **lst_b)
 
 	size = stacksize(*lst_a);
 	min = 0;
-	max = (int)(0.048 * size + 10);
+	max = (int)(0.05 * size + 10);
 	while (*lst_a)
 	{
 		if ((*lst_a)->position >= min && (*lst_a)->position <= max)
