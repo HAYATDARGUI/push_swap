@@ -6,7 +6,7 @@
 /*   By: hdargui <hdargui@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 12:17:13 by hdargui           #+#    #+#             */
-/*   Updated: 2025/01/27 18:41:46 by hdargui          ###   ########.fr       */
+/*   Updated: 2025/01/28 09:57:58 by hdargui          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,6 @@ long	ft_atoi(const char *str, int *in_range)
 			error();
 		str++;
 	}
-	if (*str != '\0')
-		*in_range = 0;
 	return ((long)(res * sign));
 }
 
